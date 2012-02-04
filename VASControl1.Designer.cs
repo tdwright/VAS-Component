@@ -44,6 +44,7 @@
             this.trackBar.TabIndex = 0;
             this.trackBar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trackBar_MouseDown);
+            this.trackBar.Resize += new System.EventHandler(this.trackBar_Resize);
             // 
             // VAS
             // 

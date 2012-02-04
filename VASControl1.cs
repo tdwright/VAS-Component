@@ -68,7 +68,7 @@ namespace VAS
 
         private void trackBar_MouseDown(object sender, MouseEventArgs e)
         {
-            int marginsize = 14;
+            int marginsize = 12;
             double leftDelta = e.Location.X - (this.trackBar.Location.X + marginsize);
             int newvalue = (int)(leftDelta / (this.trackBar.Size.Width - (marginsize * 2)) * this.trackBar.Maximum);
             this.trackBar.Value = clip(newvalue,this.trackBar.Minimum,this.trackBar.Maximum);
@@ -97,6 +97,11 @@ namespace VAS
         {
             add { this.trackBar.MouseDown += value; }
             remove { this.trackBar.MouseDown -= value; }
+        }
+
+        private void trackBar_Resize(object sender, EventArgs e)
+        {
+
         }
 
 
